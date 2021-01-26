@@ -9,7 +9,7 @@
 }
 
 html {
-   
+
    font-size: 62.5%;
 
 }
@@ -17,12 +17,32 @@ html {
 body {
    height: 100vh;
    display: flex;
-  align-items: center;
-  justify-content: center;
+   align-items: center;
+   justify-content: center;
    background-color: $color-primary;
+  position: relative;
+  @media screen and (max-width: 500px) {
+   flex-direction: column;
+   flex: 1;
+}
 }
 
+.wrapper {
+   position: absolute;
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+}
+.bg--top {
+   position: absolute;
+   top: -60%;
+   right: 50%;
+}
+.bg--bottom {
+   position: absolute;
+   bottom: -70%;
+   left: 50%;
+}
 .center {
    text-align: center;
 }
-
