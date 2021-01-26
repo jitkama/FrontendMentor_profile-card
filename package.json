@@ -7,7 +7,7 @@
     "watch": "node-sass scss/style.scss css/style.css -w"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jitka Martinkova",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^5.0.0"
