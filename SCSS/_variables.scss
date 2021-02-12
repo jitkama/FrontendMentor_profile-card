@@ -1,12 +1,30 @@
-
-
+/*****************************************
+            VARIABLES
+******************************************/
 $font-family--primary: 'Kumbh Sans', sans-serif;
 $font-size--primary: 1.8rem;
-//$color-primary: #00ffff;
+$colors: (primary:#189aa8,
+         primary--dark: #2d3248,
+         primary--light: #6a6f81,
+         grey: #969696,
+         white: #ffffff,
+         black: #222);
 $color-primary: #189aa8;
 $color-primary--dark: #2d3248;
 $color-primary--light: #6a6f81;
 $color-grey: #969696;
 $color-white: #ffffff;
 $color-black: #222;
-
+/*****************************************
+            MIXINS
+******************************************/
+@mixin font-light {
+   color: map-get($colors:primary--light);
+   font-size:1.4rem;
+   font-weight: 400;
+}
+@mixin flex-center {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}

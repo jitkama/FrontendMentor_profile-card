@@ -7,9 +7,9 @@
    bottom: 0;
    right: 0;
    border-top-left-radius: 10px;
-   background-color: $color-primary--dark;
+   background-color: map-get($colors:primary--dark);
    font-size: 1.2rem;
-   color: $color-white;
+   color: map-get($colors:white);
 
    @media screen and (max-width: 500px) {
       width: 100%;
@@ -28,7 +28,7 @@
 .card {
    width: 350px;
    height: 375px;
-   background-color: $color-white;
+   background-color: map-get($colors:white);
    border-radius: 1rem;
    overflow: hidden;
    position: relative;
@@ -45,9 +45,7 @@
       
    }
    &__header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       text-indent: -9999px;
       height: 14rem;
       width: 100%;
@@ -58,36 +56,31 @@
             border-radius: 50px;
             height: 100px;
             width: 100px;
-            border: 3px solid $color-white;
+            border: 3px solid map-get($colors:white);
             transform: translateY(7rem);
          }
    }
    &__person {
       margin-top: 7rem;
       font-weight: 700;
-      color: $color-black;
+      color: map-get($colors:black);
       font-size: $font-size--primary;
       &--age {
          font-weight: 400;
-         color: $color-primary--light;
+         color: map-get($colors:primary--light);
          margin-left: 0.5rem;
       }
       &--city {
          margin-top: 1rem;
-         font-size: 1.4rem;
-         color: $color-primary--light;
-         font-weight: 400;
+         @include font-light;
       }
    }
 
    &__footer {
       width: 100%;
       height: 9rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      color: $color-primary--light;
-      font-size: 1.4rem;
+      @include flex-center;
+      @include font-light;
       border-top: 1px solid #e7e7e7;
       position: absolute;
       bottom: 0;
@@ -95,7 +88,7 @@
       &__stats {
          font-weight: 700;
          font-size: 2rem;
-         color: $color-black;
+         color: map-get($colors:black);
          margin-bottom: .5rem;
          
       }
